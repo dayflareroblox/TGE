@@ -5,13 +5,10 @@ const Discord = require("discord.js");
 
 const bot = new Discord.Client({disableEveryone: true});
 
-bot.on("guildMemberAdd", function(member){
-   member.guild.channels.find("name", "welcome").sendMessage(member.toString() + "Welcome to ***|-| SCPF |-| Secure Contain Protect*** I am the SCPF bot, I know everything about SCP, but bear in mind not to mess up or abuse in this server! Thanks alot. - |-| SCP |-| Bot.");
-});
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
 bot.on('ready',() => {
-bot.user.setActivity("Channel [REDACTED]", {
+bot.user.setActivity("Area 303", {
       type: "STREAMING",
       url: "https://www.twitch.tv/SCP Broadcast"
     });
@@ -49,12 +46,12 @@ bot.on("message", async message => {
        let warnreason = args.join(" ").slice(22);
         
         let warnembed = new Discord.RichEmbed()
-        .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")
+        .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")
         .setColor("#2A363B")
         .addField("Warn Reason:", warnreason)
-        .setDescription("You have been warned in ***|SCPF| - Special Containment Procedures Foundation***")
+        .setDescription("You have been warned in **SCP Fоundatiоn**")
             
-       message.reply("***User has been warned.***");   
+       message.reply("**User has been warned.**");   
             
        if(message.mentions.users.first()) return message.mentions.users.first().send(warnembed);       
       }            
@@ -67,11 +64,11 @@ bot.on("message", async message => {
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
   if(cmd === `${prefix}Group`){
   let embed = new Discord.RichEmbed()
-  .setTitle("|REDACTED|")
-  .setDescription("https://www.roblox.com/My/Groups.aspx?gid=4602602")
-  .addField("Information:", "Owned by: DesiredMars")
+  .setTitle("SCP FoundatiOn")
+  .setDescription("https://www.roblox.com/Groups/Group.aspx?gid=1166093")
+  .addField("Information:", "Owned by: FusBot")
   .setColor("#2A363B")
-  .setFooter("Any information leak of this group will result in a CE in order of the internal Security Department.")
+  .setFooter("This group specialises in Secure, Contain, Protect.")
   
    message.author.send(embed); 
   }
@@ -83,8 +80,8 @@ if(cmd === `${prefix}shout`){
      let announcement = args.join(" ");
      let embed = new Discord.RichEmbed()
      .setDescription(announcement)
-     .setTitle("|-Announcement|")
-     .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")
+     .setTitle("Server Shout | SCP FoundatiOn")
+     .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")
      .setColor("#2A363B")
       message.delete();
      message.channel.send(embed)
@@ -141,15 +138,15 @@ if (cmd === `${prefix}report`){
    let reason = args.join(" ").slice(22);
 
    let repoted = new Discord.RichEmbed()
-   .setTitle("Reported in ***|SCPF| - Special Containment Procedures Foundation**")
+   .setTitle("Reported in **SCP FoundatiOn**")
    .setDescription("You have been reported, please bear in mind the administrators now have this report file Thanks.")
    .addField("Report reason:", reason)
    .setColor("#2A363B")
-   .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")
+   .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")
   
       
    let reportembed = new Discord.RichEmbed()
-   .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")   
+   .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")   
    .setTitle("Moderation Report")
    .setDescription("Moderators need to act on the reported user.")
    .setColor("#2A363B")
@@ -166,7 +163,7 @@ if (cmd === `${prefix}report`){
 
    message.delete().catch(O_o=>{});
    reportschannel.send(reportembed);
-      message.reply("***User had been reported, if you are fake reporting you will be blacklisted from this server immidiatley.***")  
+      message.reply("**User had been reported, if you are fake reporting you will be blacklisted from this server immidiatley.**")  
         if(message.mentions.users.first()) return message.mentions.users.first().send(repoted);
   return;
 }
@@ -182,15 +179,15 @@ if (cmd === `${prefix}report`){
   if(kUser.hasPermission("KICK_MEMBERS")) return message.reply("Sorry that user cannot be kicked.");
 
    let kicksend = new Discord.RichEmbed()
-   .setTitle("Kicked from ***|-| SCPF |-| Secure Contain Protect***")
+   .setTitle("Kicked from ***SCP FoundatiOn***")
    .setDescription("You have been kicked, please bear in mind the administrators now have this kick file Thanks.")
    .addField("Kick reason:", kReason)
    .setColor("#2A363B")
-   .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")      
+   .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")      
         
         
   let kEmbed = new Discord.RichEmbed()
-   .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png") 
+   .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png") 
    .setTitle("Moderation Kick")
   .setColor("#2A363B")
   .addField("Kicked User.", `${kUser} with the ID: ${kUser.id}`)
@@ -223,16 +220,16 @@ if (cmd === `${prefix}report`){
     if(bUser.hasPermission("BAN_MEMBERS")) return message.reply("Sorry that user cannot be banned.");
   
    let bansend = new Discord.RichEmbed()
-   .setTitle("Banned from ***|-| SCPF |-| Secure Contain Protect***")
+   .setTitle("Banned from **SCP FoundatiOn**")
    .setDescription("You have been Banned, please bear in mind the administrators now have this kick file Thanks.")
    .addField("Ban reason:", bReason)
    .setColor("#2A363B")
-   .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")
+   .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")
    
          
   
     let bEmbed = new Discord.RichEmbed()
-    .setThumbnail("https://cdn.discordapp.com/attachments/526355263025053698/528169424771874816/f176f51c099212f59c7625e217aeba1a.png")    
+    .setThumbnail("https://cdn.discordapp.com/attachments/529774788273635331/529774843621539858/d774dd3cf0e2118d9781ca623a378775.png")    
     .setTitle("Moderation Ban")
     .setColor("#2A363B")
     .addField("Banned User.", `${bUser} with the ID: ${bUser.id}`)
@@ -247,7 +244,7 @@ if (cmd === `${prefix}report`){
   
     message.guild.member(bUser).ban(bReason);
     bChannel.send(bEmbed);    
-  message.reply("***User had been Banned.***");
+  message.reply("**User had been Banned.**");
         if(message.mentions.users.first()) return message.mentions.users.first().send(bansend);        
 
     return;
