@@ -8,7 +8,7 @@ const bot = new Discord.Client({disableEveryone: true});
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
 bot.on('ready',() => {
-bot.user.setActivity("Area 303", {
+bot.user.setActivity("Area 003", {
       type: "STREAMING",
       url: "https://www.twitch.tv/SCP Broadcast"
     });
@@ -252,4 +252,4 @@ if (cmd === `${prefix}report`){
   
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login("NTI5Nzc2MzI2MjkxMzU3NzA0.Dw1wYw.JBiQPbXZl3qQ97Ic1HKU6IwPizo");
