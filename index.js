@@ -252,4 +252,4 @@ if (cmd === `${prefix}report`){
   
 });
 
-bot.login("NTI5Nzc2MzI2MjkxMzU3NzA0.Dw1wYw.JBiQPbXZl3qQ97Ic1HKU6IwPizo");
+bot.login(process.env.BOT_TOKEN);
