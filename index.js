@@ -37,7 +37,7 @@ bot.on("message", async message => {
  
 
       if(cmd === `${prefix}testing`){
-            let embed = Discord.RichEmbed()
+            let embed = new Discord.RichEmbed()
             .setTitle("Testing embed")
             .setDescription("RTesting for you uncle richard.")
             .setFooter("DesiredMercury#2391")
