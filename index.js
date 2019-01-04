@@ -37,7 +37,6 @@ bot.on("message", async message => {
  
 
       if(cmd === `${prefix}testing`){
-     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("***Sorry you cannot test.***");   
             let embed = Discord.RichEmbed()
             .setTitle("Testing embed")
             .setDescription("RTesting for you uncle richard.")
