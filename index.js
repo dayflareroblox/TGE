@@ -39,8 +39,9 @@ bot.on("message", async message => {
       if(cmd === `${prefix}testing`){
             let embed = new Discord.RichEmbed()
             .setTitle("Testing embed")
-            .setDescription("RTesting for you uncle richard.")
+            .setDescription("Testing for you uncle richard, the god father")
             .setFooter("DesiredMercury#2391")
+            .setThumbnail("https://cdn.discordapp.com/attachments/530879309590822955/530879369162391582/WIN_20190104_22_44_51_Pro.jpg")
             
             message.channel.send(embed)
                                         
