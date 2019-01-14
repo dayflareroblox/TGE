@@ -101,7 +101,7 @@ bot.on("message", async message => {
        .setDescription("Please say 'cmds' or 'playersupport' or 'info' for the help catagories.")
        
        message.channel.send(embed)
-       if (message.content === `cmds`){
+       if (message.content === `${prefix}ping`) {
          message.channel.send("test")  
     }       
   }
