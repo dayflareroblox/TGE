@@ -71,12 +71,7 @@ bot.on("message", async message => {
        if(message.mentions.users.first()) return message.mentions.users.first().send(warnembed);       
       }            
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\       
- 
-   if(cmd === `${prefix}help`){
-     message.reply("wip");
- }   
-      
- //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+
   if(cmd === `${prefix}Group`){
   let embed = new Discord.RichEmbed()
   .setTitle("SCP Foundation")
@@ -99,7 +94,19 @@ bot.on("message", async message => {
   
    message.channel.send(embed); 
   }
- //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+    
+   if(cmd === `${prefix}help`){
+       let embed = new Discord.RichEmbed()
+       .setDescription("Please say 'cmds' or 'playersupport' or 'info' for the help catagories.")
+       
+       message.channel.send(embed)
+       if(message.content === `cmds`){
+         message.channel.send("test")  
+    }       
+  }
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\           
+    
 
 if(cmd === `${prefix}shout`){
     
