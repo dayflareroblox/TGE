@@ -85,9 +85,21 @@ bot.on("message", async message => {
   .setColor("#2A363B")
   .setFooter("This group specialises in Secure, Contain, Protect.")
   
-   message.author.send(embed); 
+   message.channel.send(embed); 
   }
- //---------------------------------------------------------------\\//---------------------------------------------------------------\\      
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+    
+  if(cmd === `${prefix}group`){
+  let embed = new Discord.RichEmbed()
+  .setTitle("SCP Foundation")
+  .setDescription("https://www.roblox.com/my/groups.aspx?gid=3305396")
+  .addField("Information:", "Owned by: YourSCPF")
+  .setColor("#2A363B")
+  .setFooter("This group specialises in Secure, Contain, Protect.")
+  
+   message.channel.send(embed); 
+  }
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
 
 if(cmd === `${prefix}shout`){
     
@@ -99,7 +111,8 @@ if(cmd === `${prefix}shout`){
      .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
      .setColor("#2A363B")
       message.delete();
-     message.channel.send(embed)
+     let shoutchannel = message.guild.channel.find(`name`, "announcements")
+     shoutchannel.send(embed)
 
 }   
 
