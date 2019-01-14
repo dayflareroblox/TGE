@@ -3,7 +3,7 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({disableEveryone: false});
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
@@ -113,6 +113,7 @@ if(cmd === `${prefix}shout`){
       message.delete();
      let shoutchannel = message.guild.channels.find(`name`, "announcements");
      shoutchannel.send(embed)
+    shoutchannel.send("@everyone")
 
 }   
 
