@@ -7,26 +7,6 @@ const bot = new Discord.Client({disableEveryone: true});
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
-
-bot.on("message", async message => {
-
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-
-
-  let prefix = botconfig.prefix;
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  if(cmd === `${prefix}purge`){
-  message.channel.bulkDelete(args[0]);
- return;
-}  
- 
- //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-    
 function changing_status() {
 
     let status = ['Watching over SCPF..', 'Say :help if you need me!', 'Made by DesiredMercury..']
@@ -49,7 +29,28 @@ bot.on("ready", () => {
 
 
 
-//---------------------------------------------------------------\\//---------------------------------------------------------------\\     
+//---------------------------------------------------------------\\//---------------------------------------------------------------\\ 
+
+
+bot.on("message", async message => {
+
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+
+  let prefix = botconfig.prefix;
+
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+  if(cmd === `${prefix}purge`){
+  message.channel.bulkDelete(args[0]);
+ return;
+}  
+ 
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+         
     
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\  
       if(cmd === `${prefix}warn`){
