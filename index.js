@@ -8,7 +8,7 @@ const bot = new Discord.Client({disableEveryone: true});
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
 bot.on('ready',() => {
-bot.user.setActivity("Area 003", {
+bot.user.setActivity("Say :help if you need me || Made by DesiredMercury", {
       type: "STREAMING",
       url: "https://www.twitch.tv/SCP Broadcast"
     });
