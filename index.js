@@ -7,12 +7,27 @@ const bot = new Discord.Client({disableEveryone: true});
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
-bot.on('ready',() => {
-bot.user.setActivity("Say :help if you need me || Made by DesiredMercury", {
-      type: "STREAMING",
-      url: "https://www.twitch.tv/SCP Broadcast"
-    });
+function changing_status() {
+
+    let status = ['Watching over SCPF..', 'Say :help if you need me!', 'Made by DesiredMercury..']
+
+    let random = status[Math.floor(Math.random() * status.length)]
+
+    bot.user.setActivity(random)
+
+}
+
+
+
+bot.on("ready", () => {
+
+    console.log("Changed");
+
+    setInterval(changing_status, 2000);
+
 })
+
+
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
