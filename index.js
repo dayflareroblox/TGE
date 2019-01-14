@@ -111,7 +111,7 @@ if(cmd === `${prefix}shout`){
      .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
      .setColor("#2A363B")
       message.delete();
-     let shoutchannel = message.guild.channel.find(`name`, "announcements")
+     let shoutchannel = message.guild.channels.find(`name`, "announcements");
      shoutchannel.send(embed)
 
 }   
