@@ -52,7 +52,6 @@ bot.on("message", async message => {
  
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
  if(cmd === `${prefix}profile`){
-        if (message.content.startsWith(PREFIX + 'Userinfo')) {
 
         const UserInfo = new Discord.MessageEmbed()
 
@@ -92,8 +91,7 @@ bot.on("message", async message => {
             .setTimestamp() //The timestamp of this embed
 
         message.channel.send(UserInfo);
-    }
-}; 
+ } 
 
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
     if(cmd === `${prefix}hug`){
