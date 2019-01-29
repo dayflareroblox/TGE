@@ -205,17 +205,7 @@ if(cmd === `${prefix}stats`){
    message.channel.send(embed); 
   }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-    
-   if(cmd === `${prefix}help`){
-       let embed = new Discord.RichEmbed()
-       .setDescription("Please say 'cmds' or 'playersupport' or 'info' for the help catagories.")
-       
-       message.channel.send(embed)
-       message.channel.awaitMessages(mag => {
-                   if (mag.content.includes('cancel') && mag.author.id == message.author.id) {
-                    message.channel.send('**Cancelled prompt.**')
-                   }    
- })
+
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\           
      
 
