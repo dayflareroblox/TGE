@@ -50,7 +50,18 @@ bot.on("message", async message => {
 }  
  
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
- 
+ if(cmd === `${prefix}dadjoke`){
+  
+	 let sa = require ("superagent");
+
+    let {body} = await sa
+    .get(`https://icanhazdadjoke.com/slack`);
+
+    let o = new discord.RichEmbed()
+        .setColor(0xFFFFFF)
+        .setDescription("**" + body.attachments.map(a => a.text) + "**")
+    msg.channel.send(o)   
+ }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
     if(cmd === `${prefix}hug`){
         let hug = [
