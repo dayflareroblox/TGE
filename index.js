@@ -28,15 +28,7 @@ bot.on("ready", () => {
 
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-if (cmd ===`${prefix}invite`) {
-  if (!message.member.hasPermission("CREATE_INSTANT_INVITE")) return;
-  message.channel.createInvite({maxAge: 0}).then(invite => {
-    let embed = new Discord.RichEmbed()
-    .setColor(color)
-    .setDescription(`**Permanent Invite Link**: ${invite}`);
-    message.channel.send(embed);
-  });
-}
+
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\ 
 
 
@@ -58,9 +50,17 @@ bot.on("message", async message => {
 }  
  
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-
+if (cmd ===`${prefix}invite`) {
+  if (!message.member.hasPermission("CREATE_INSTANT_INVITE")) return;
+  message.channel.createInvite({maxAge: 0}).then(invite => {
+    let embed = new Discord.RichEmbed()
+    .setColor(color)
+    .setDescription(`**Permanent Invite Link**: ${invite}`);
+    message.channel.send(embed);
+  });
+}
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
-if (cmd ===`${prefix}kiss`) {
+if (cmd === `${prefix}kiss`) {
     let kiss = [
       "https://media1.tenor.com/images/395b565d26a74bcf6b6fc8cea50df021/tenor.gif",
       "http://cdn.smosh.com/wp-content/uploads/ftpuploads/bloguploads/awkward-kiss-little-girl.gif",
