@@ -110,7 +110,7 @@ if (cmd === `${prefix}kiss`) {
 }  
 
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-      if(cmd === `${prefix}8ball`){
+      if(cmd === `${prefix}time`){
           var today = new Date()
 let Day = today.toString().split(" ")[0].concat("day");
 let Month = today.toString().split(" ")[1]
