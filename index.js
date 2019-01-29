@@ -110,6 +110,20 @@ if (cmd === `${prefix}kiss`) {
 }  
 
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+    
+          if(cmd === `${prefix}cmds`){
+              let cmds = new Discord.RichEmbed()
+              .setDescription("All commands are listed below.")
+              .addField("Utilities:", "Invite, Time, Group, Shout")
+              .addField("Fun:", "Hug, Kiss, 8ball, say, coinflip.")
+              .addField("Moderation", "Kick, Ban, Purge, warn, report, dm.")
+              .setFooter("Made by: DesiredMercury")
+              
+              message.reply(cmds)
+                 
+
+      }
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\
       if(cmd === `${prefix}time`){
           var today = new Date()
 let Day = today.toString().split(" ")[0].concat("day");
