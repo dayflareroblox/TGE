@@ -2,9 +2,9 @@
 
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
+const rbx = require("roblox-js")
 
 const bot = new Discord.Client({disableEveryone: false});
-const client = new Discord.Client({disableEveryone: false});
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 
