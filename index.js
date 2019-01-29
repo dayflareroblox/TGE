@@ -50,6 +50,100 @@ bot.on("message", async message => {
 }  
  
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+var filterWords = [
+    "anal",
+    "anus",
+    "arse",
+    "nigger",
+    "nigga",
+    "ballsack",
+    "balls",
+    "bastard",
+    "bitch",
+    "biatch",
+    "blowjob",
+    "blow job",
+    "bollock",
+    "bollok",
+    "boner",
+    "boob",
+    "bugger",
+    "bum",
+    "buttplug",
+    "clitoris",
+    "cock",
+    "coon",
+    "cunt",
+    "dick",
+    "dildo",
+    "dyke",
+    "fag",
+    "feck",
+    "fellate",
+    "fellatio",
+    "felching",
+    "fucker",
+    "fucking",
+    "fuck",
+    "f u c k",
+    "fudgepacker",
+    "fudge packer",
+    "flang",
+    "homo",
+    "jizz",
+    "knobend",
+    "knob end",
+    "labia",
+    "muff",
+    "penis",
+    "prick",
+    "pube",
+    "pussy",
+    "queer",
+    "scrotum",
+    "sex",
+    "shit",
+    "s hit",
+    "sh1t",
+    "slut",
+    "smegma",
+    "fucken",
+    "spunk",
+    "tit",
+    "tosser",
+    "turd",
+    "twat",
+    "vagina",
+    "wank",
+    "whore",
+    "mofucker",
+    "niger"
+];
+
+
+
+
+bot.on("message", message => {
+            switch (true) {
+                case message.author.bot:
+                    return;
+                case new RegExp(filterWords.join("|")).test(message.content.toLowerCase()):
+                    const guild = client.guilds.find(guild => guild.id);
+                    let edit = message.content.toLowerCase();
+                    for (var i in filterWords) {
+                        edit = edit.replace(new RegExp(filterWords[i], "g"), "`*****`");
+                    }
+                    message.delete();
+                    message.channel.send("", {
+                        embed: new Discord.RichEmbed()
+                            .setColor("RANDOM")
+                            .setTitle("New Message")
+                            .setDescription(edit)
+                    });
+            }
+        }
+ 
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
     if(cmd === `${prefix}hug`){
         let hug = [
         "https://data.whicdn.com/images/221692186/original.gif",
@@ -105,21 +199,7 @@ bot.on("message", async message => {
     })
     }
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-    if(cmd === `${prefix}1v1`){
-            if (!message.guild) {
-      return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.').setFooter('', bot.user.avatarURL).setTimestamp()); }
-    let user = message.mentions.users.first();
-    if (message.mentions.users.size < 2) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription(message.author.tag + ', kullanım: d-1vs1 <@kullanıcı> <@kullanıcı> .').setFooter('', client.user.avatarURL).setTimestamp());
-    var sans = ["10'a","1'e","20'ye","30'a","2 ye"]
-    var sonuc = sans[Math.floor((Math.random() * sans.length))];
-      message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş başladı!').setFooter('Rahatsızların  Savaşı yapılıyor.', bot.user.avatarURL).setTimestamp())
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat Küt.').setFooter('Profesyonellerin  Savaşı yapılıyor.', bot.user.avatarURL).setTimestamp()))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat Küp.').setFooter('Profesyonellerin  Savaşı yapılıyor.', bot.user.avatarURL).setTimestamp()))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşılıyor Pat küt.').setFooter('Profesyonellerin  Savaşı yapılıyor.', bot.user.avatarURL).setTimestamp()))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş Sonuçlanıyor.').setFooter('Profesyonellerin  Savaşı yapılıyor.', bot.user.avatarURL).setTimestamp()))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaş bitti!').setFooter('Profesyonellerin  Savaşı yapılıyor.', bot.user.avatarURL).setTimestamp()))
-      .then(nmsg => nmsg.edit(new Discord.RichEmbed().setColor('RANDOM').setTitle('1vs1').setDescription('Savaşın Galibi: **' + user.tag+'** Helal olsun sana Ne Vurdun Be Adımın Canını 100 den **'+ sonuc +'** Kadar Düşürdün Ve Adam Pes Etti.').setImage("https://media.giphy.com/media/3oEhmVCSmpW56nR6rm/giphy.gif").setFooter('1vs1 Savaşı Bitti.', client.user.avatarURL).setTimestamp()))
-        };
+
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
       if(cmd === `${prefix}warn`){
       
