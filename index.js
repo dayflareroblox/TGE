@@ -116,7 +116,7 @@ if (cmd ===`${prefix}kiss`) {
     let fetched = responses[Math.floor(Math.random() * responses.length)];
     
     // Form Embed
-    const embed = new Discord.MessageEmbed()
+    let embed = new Discord.RichEmbed()
         .setColor(0xffffff)
         .setFooter(fetched);
     
