@@ -215,7 +215,7 @@ if(cmd === `${prefix}stats`){
                    if (mag.content.includes('cancel') && mag.author.id == message.author.id) {
                     message.channel.send('**Cancelled prompt.**')
                    }
-    }     
+    })     
  })
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\           
     
