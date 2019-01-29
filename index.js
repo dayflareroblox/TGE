@@ -213,9 +213,12 @@ if(cmd === `${prefix}stats`){
        .setDescription("Please say 'cmds' or 'playersupport' or 'info' for the help catagories.")
        
        message.channel.send(embed)
-       if (message.content.includes('cancel') && message.author.id == message.author.id) {
-         message.channel.send("**Cancelled**")  
-    }       
+       message.channel.awaitMessages(mag => {
+                   if (mag.content.includes('cancel') && mag.author.id == message.author.id) {
+                    message.channel.send('**Cancelled prompt.**')
+                    }
+       }
+    }     
   }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\           
     
