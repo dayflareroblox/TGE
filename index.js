@@ -118,6 +118,7 @@ if (cmd === `${prefix}kiss`) {
               .addField("Fun:", "Hug, Kiss, 8ball, say, coinflip.")
               .addField("Moderation", "Kick, Ban, Purge, warn, report, dm.")
               .setFooter("Made by: DesiredMercury")
+              .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
               
               message.reply(cmds)
                  
