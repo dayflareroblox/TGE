@@ -157,21 +157,7 @@ if (cmd ===`${prefix}kiss`) {
     }
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 if(cmd === `${prefix}stats`){
-        const List = message.guild.emojis.map(e => e.toString()).join(" ");
 
-        const EmojiList = new Discord.MessageEmbed() //Embed Constructor || If lower than v12.0.0 | Use RichEmbed
-            .setTitle('➠ Emoji\'s') //Title
-            .setAuthor(message.guild.name, message.guild.iconURL `https://cdn.discordapp.com/attachments/383886042178256909/397988796186230784/4zBNFjA8S9yjNB_ONwqBvxTvyXYdC7Nh1jYZ2x6YEcldBr2fyijdjM2J5EoVdTpnkAw300.png`) //<Guild> Name, Icon URL || If <Guild> Icon => Null Sends Custom Image URL 
-            .setColor('RANDOM') //Random colour || Any HexCode Can be used Instead
-            .setDescription(List) //Here will List of Emoji's
-            .setTimestamp() //The timestamp of this embed
-            .setFooter(message.guild.name) //Change To Anything As You Wish
-        message.channel.send(EmojiList) //Sends to Channel
-
-        //------------------------------------------------------------------------------
-        //If You pefer not to send in an Embed
-        //Try
-        message.channel.send(List); //sends to Channel Without Embed 
 }
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
       if(cmd === `${prefix}warn`){
@@ -227,8 +213,8 @@ if(cmd === `${prefix}stats`){
        .setDescription("Please say 'cmds' or 'playersupport' or 'info' for the help catagories.")
        
        message.channel.send(embed)
-       if (message.content === `${prefix}ping`) {
-         message.channel.send("test")  
+       if (message.content.includes('cancel') && message.author.id == message.author.id) {
+         message.channel.send("**Cancelled**")  
     }       
   }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\           
