@@ -28,7 +28,7 @@ bot.on("ready", () => {
 
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-if (cmd ===`${prefix}kiss`) {
+if (cmd ===`${prefix}invite`) {
   if (!message.member.hasPermission("CREATE_INSTANT_INVITE")) return;
   message.channel.createInvite({maxAge: 0}).then(invite => {
     let embed = new Discord.RichEmbed()
