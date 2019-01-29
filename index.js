@@ -27,6 +27,29 @@ bot.on("ready", () => {
 
 
 
+//---------------------------------------------------------------\\//---------------------------------------------------------------\\
+bot.on('guildMemberAdd', member => {
+let logChannel = member.guild.channels.find('name', 'admission');
+
+  let logEmbed = new Discord.RichEmbed()
+  .setAuthor("BCore | Logs") 
+  .setDescription(member.user.username + " je ``usao`` na server. (" + member.user.id + ")")
+  .setColor('RANDOM')
+  .setFooter("Igrac se pridruzio", member.user.displayAvatarURL)
+  .setTimestamp()
+  logChannel.send(logEmbed);
+})
+bot.on('guildMemberRemove', member => {
+let logChannel = member.guild.channels.find('name', '⟬💾⟭➞logs');
+
+  let logEmbed = new Discord.RichEmbed()
+  .setAuthor("BCore | Logs") 
+    .setDescription(member.user.username + " je ``izasao`` sa servera. (" + member.user.id + ")")
+  .setFooter("Igrac je izasao", member.user.displayAvatarURL)
+  .setColor('RANDOM')
+  .setTimestamp()
+  logChannel.send(logEmbed);
+})
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\ 
 
 
@@ -48,50 +71,7 @@ bot.on("message", async message => {
 }  
  
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-    //sorry for the bad english and google translate :/
-var prefix = ":"
 
-if (message.channel.type === "dm") { //if the channel is a DM channel
-    var args = message.content.split(" ").slice(0)
-    var args = args.slice(0).join(" ") //create the args
-
-    if (message.content.startsWith(prefix)) return message.channel.send(":x: Please use commands in real server! :x:") //if the message is a command
-    message.channel.send("This message has been send to the staff! :incoming_envelope:");
-    if (message.content.startsWith(prefix)) return
-    if (args.length > 256) return message.reply("Your message content too many characters :/") //if the message contnt more than 256 character, what fields do not allow
-    var embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTitle("New request in DM!")
-        .addField(args, "Send by: " + message.author.username + " with the ID: " + message.author.id)
-    bot.guilds.get("534135074476654593").channels.get("539911487137906688").send(embed) //send the embed in a specific channel
-}
-
-
-if (message.content.startsWith(prefix + "reply")) {
-    if (message.author.id !== "481171799204429834") return message.reply('You cannot use that!')
-    var args = message.content.split(" ").slice(0)
-    var Rargs = message.content.split(" ").slice(2).join(" ")
-    var userID = args[1]
-    if (isNaN(args[1])) return message.reply("This is not an ID!") //if args is Not A Number!
-    var embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTitle("the staff answered you!")
-        .setDescription(Rargs)
-        .setFooter("this message was sent to you by: " + message.author.username + " !")
-    bot.users.get(userID).send(embed)
-    message.channel.send("Send!").catch(console.error) //send the message
-    //it may be that if the user has blocked your bot that it does not work
-}
-/*      How to use:
-        ___________
-
-When a DM is sent to your bot, it will send what he said,
-You can reply {user ID provided by the message}
-and that will answer him!
-example:
-!reply 696969696966 Thanks for letting us know about this glitch!
-
-*/
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
 if (cmd ===`${prefix}kiss`) {
     let kiss = [
