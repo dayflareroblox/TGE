@@ -50,7 +50,7 @@ bot.on("message", async message => {
 }  
  
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-if (command ===`${prefix}kiss`) {
+if (cmd ===`${prefix}kiss`) {
     let kiss = [
       "https://media1.tenor.com/images/395b565d26a74bcf6b6fc8cea50df021/tenor.gif",
       "http://cdn.smosh.com/wp-content/uploads/ftpuploads/bloguploads/awkward-kiss-little-girl.gif",
