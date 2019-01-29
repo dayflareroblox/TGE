@@ -76,19 +76,24 @@ bot.on("message", async message => {
   let embed = new Discord.RichEmbed()
   .setTitle("SCP Foundation")
   .setDescription("https://www.roblox.com/my/groups.aspx?gid=3305396")
-  .addField("Information:", "Owned by: YourSCPF")
+  .addField("Information:", "Owned by: Lael_Forare")
   .setColor("#2A363B")
   .setFooter("This group specialises in Secure, Contain, Protect.")
   
    message.channel.send(embed); 
   }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+    if(cmd === `${prefix}coinflip`){
+      message.channel.send(`Result: **${Math.floor(Math.random() * 2) == 0 ? "Heads" : "Tails"}**!`);
+    }        
+    
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
     
   if(cmd === `${prefix}group`){
   let embed = new Discord.RichEmbed()
   .setTitle("SCP Foundation")
   .setDescription("https://www.roblox.com/my/groups.aspx?gid=3305396")
-  .addField("Information:", "Owned by: YourSCPF")
+  .addField("Information:", "Owned by: Lael_Forare")
   .setColor("#2A363B")
   .setFooter("This group specialises in Secure, Contain, Protect.")
   
@@ -124,23 +129,7 @@ if(cmd === `${prefix}shout`){
 
 }   
 
- //---------------------------------------------------------------\\//---------------------------------------------------------------\\   
-
- if(cmd === `${prefix}status`){
-
-   let announcement = args.join(" ");
- 
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Sorry you cant set status.");  
-  bot.user.setActivity(announcement)
-   
-  let aembed = new Discord.RichEmbed()
-  .setTitle("Bot Status")
-  .setColor("#2A363B")
-  .setDescription("The bot status has been changed, please dont abuse this feature.")
-  message.channel.send(aembed);
-}
-   
-//---------------------------------------------------------------\\//---------------------------------------------------------------\\   
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\     
    
 if(cmd === `${prefix}dm`){
 
