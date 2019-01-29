@@ -157,23 +157,21 @@ if (cmd ===`${prefix}kiss`) {
     }
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\
 if(cmd === `${prefix}stats`){
-     // Variables
-    let servers = bot.guilds.size; // Server Count
-    let users = 0; // Start of user count
-    let channels = bot.channels.size; // Channel Count
-    
-    // This goes through every guild to grab an accurate memberCount;
-    bot.guilds.map(g => users += g.memberCount);
-    
-    // Form Embed
-    const embed = new Discord.MessageEmbed()
-        .setTitle('Community Channels')
-        .addField('Servers', servers, true)
-        .addField('Users', users, true)
-        .addField('Channels', channels, true);
+        const List = message.guild.emojis.map(e => e.toString()).join(" ");
 
-    // Send Embed
-    message.channel.send(embed);   
+        const EmojiList = new Discord.MessageEmbed() //Embed Constructor || If lower than v12.0.0 | Use RichEmbed
+            .setTitle('➠ Emoji\'s') //Title
+            .setAuthor(message.guild.name, message.guild.iconURL `https://cdn.discordapp.com/attachments/383886042178256909/397988796186230784/4zBNFjA8S9yjNB_ONwqBvxTvyXYdC7Nh1jYZ2x6YEcldBr2fyijdjM2J5EoVdTpnkAw300.png`) //<Guild> Name, Icon URL || If <Guild> Icon => Null Sends Custom Image URL 
+            .setColor('RANDOM') //Random colour || Any HexCode Can be used Instead
+            .setDescription(List) //Here will List of Emoji's
+            .setTimestamp() //The timestamp of this embed
+            .setFooter(message.guild.name) //Change To Anything As You Wish
+        message.channel.send(EmojiList) //Sends to Channel
+
+        //------------------------------------------------------------------------------
+        //If You pefer not to send in an Embed
+        //Try
+        message.channel.send(List); //sends to Channel Without Embed 
 }
   //---------------------------------------------------------------\\//---------------------------------------------------------------\\    
       if(cmd === `${prefix}warn`){
