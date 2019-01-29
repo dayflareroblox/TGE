@@ -28,28 +28,15 @@ bot.on("ready", () => {
 
 
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\
-bot.on('guildMemberAdd', member => {
-let logChannel = member.guild.channels.find('name', 'admission');
-
-  let logEmbed = new Discord.RichEmbed()
-  .setAuthor("BCore | Logs") 
-  .setDescription(member.user.username + " je ``usao`` na server. (" + member.user.id + ")")
-  .setColor('RANDOM')
-  .setFooter("Igrac se pridruzio", member.user.displayAvatarURL)
-  .setTimestamp()
-  logChannel.send(logEmbed);
-})
-bot.on('guildMemberRemove', member => {
-let logChannel = member.guild.channels.find('name', '⟬💾⟭➞logs');
-
-  let logEmbed = new Discord.RichEmbed()
-  .setAuthor("BCore | Logs") 
-    .setDescription(member.user.username + " je ``izasao`` sa servera. (" + member.user.id + ")")
-  .setFooter("Igrac je izasao", member.user.displayAvatarURL)
-  .setColor('RANDOM')
-  .setTimestamp()
-  logChannel.send(logEmbed);
-})
+if (cmd ===`${prefix}kiss`) {
+  if (!message.member.hasPermission("CREATE_INSTANT_INVITE")) return;
+  message.channel.createInvite({maxAge: 0}).then(invite => {
+    let embed = new Discord.RichEmbed()
+    .setColor(color)
+    .setDescription(`**Permanent Invite Link**: ${invite}`);
+    message.channel.send(embed);
+  });
+}
 //---------------------------------------------------------------\\//---------------------------------------------------------------\\ 
 
 
