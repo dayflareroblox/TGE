@@ -117,8 +117,8 @@ if (cmd === `${prefix}kiss`) {
               .addField("Utilities:", "Invite, Time, Group, Shout")
               .addField("Fun:", "Hug, Kiss, 8ball, say, coinflip.")
               .addField("Moderation", "Kick, Ban, Purge, warn, report, dm.")
-              .setFooter("Made by: DesiredMercury")
-              .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
+              .setFooter("Made by: Color3fromHSL")
+              .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")
               
               message.reply(cmds)
                  
@@ -247,10 +247,10 @@ if(cmd === `${prefix}stats`){
        let warnreason = args.join(" ").slice(22);
         
         let warnembed = new Discord.RichEmbed()
-        .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
+        .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")
         .setColor("#2A363B")
         .addField("Warn Reason:", warnreason)
-        .setDescription("You have been warned in **SCP Fоundatiоn**")
+        .setDescription("You have been warned in **TGE - The Galactic Empire**")
             
        message.reply("**User has been warned.**");   
             
@@ -260,11 +260,11 @@ if(cmd === `${prefix}stats`){
 
   if(cmd === `${prefix}Group`){
   let embed = new Discord.RichEmbed()
-  .setTitle("SCP Foundation")
-  .setDescription("https://www.roblox.com/my/groups.aspx?gid=3305396")
-  .addField("Information:", "Owned by: Lael_Forare")
+  .setTitle("TGE - The Galactic Empire")
+  .setDescription("https://www.roblox.com/groups/4667216/GE-Galactic-Empire#!/about")
+  .addField("Information:", "Owned by: RovkName")
   .setColor("#2A363B")
-  .setFooter("This group specialises in Secure, Contain, Protect.")
+  .setFooter("TGE - The Galactic Empire")
   
    message.channel.send(embed); 
   }
@@ -277,11 +277,11 @@ if(cmd === `${prefix}stats`){
     
   if(cmd === `${prefix}group`){
   let embed = new Discord.RichEmbed()
-  .setTitle("SCP Foundation")
-  .setDescription("https://www.roblox.com/my/groups.aspx?gid=3305396")
-  .addField("Information:", "Owned by: Lael_Forare")
+  .setTitle("TGE - The Galactic Empire")
+  .setDescription("https://www.roblox.com/groups/4667216/GE-Galactic-Empire#!/about")
+  .addField("Information:", "Owned by: RovkName")
   .setColor("#2A363B")
-  .setFooter("This group specialises in Secure, Contain, Protect.")
+  .setFooter("TGE - The Galactic Empire")
   
    message.channel.send(embed); 
   }
@@ -296,8 +296,8 @@ if(cmd === `${prefix}shout`){
      let announcement = args.join(" ");
      let embed = new Discord.RichEmbed()
      .setDescription(announcement)
-     .setTitle("Server Shout | SCP Foundation")
-     .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
+     .setTitle("TGE - The Galactic Empire")
+     .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")
      .setColor("#2A363B")
       message.delete();
      let shoutchannel = message.guild.channels.find(`name`, "announcements");
@@ -340,15 +340,15 @@ if (cmd === `${prefix}report`){
    let reason = args.join(" ").slice(22);
 
    let repoted = new Discord.RichEmbed()
-   .setTitle("Reported in **SCP Foundation**")
+   .setTitle("Reported in **TGE - The Galactic Empire**")
    .setDescription("You have been reported, please bear in mind the administrators now have this report file Thanks.")
    .addField("Report reason:", reason)
    .setColor("#2A363B")
-   .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
+   .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")
   
       
    let reportembed = new Discord.RichEmbed()
-   .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png") 
+   .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png") 
    .setTitle("Moderation Report")
    .setDescription("Moderators need to act on the reported user.")
    .setColor("#2A363B")
@@ -381,15 +381,15 @@ if (cmd === `${prefix}report`){
   if(kUser.hasPermission("KICK_MEMBERS")) return message.reply("Sorry that user cannot be kicked.");
 
    let kicksend = new Discord.RichEmbed()
-   .setTitle("Kicked from ***SCP Foundation***")
+   .setTitle("Kicked from **TGE - The Galactic Empire**")
    .setDescription("You have been kicked, please bear in mind the administrators now have this kick file Thanks.")
    .addField("Kick reason:", kReason)
    .setColor("#2A363B")
-   .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")     
+   .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")     
         
         
   let kEmbed = new Discord.RichEmbed()
-   .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png") 
+   .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png") 
    .setTitle("Moderation Kick")
   .setColor("#2A363B")
   .addField("Kicked User.", `${kUser} with the ID: ${kUser.id}`)
@@ -403,7 +403,7 @@ if (cmd === `${prefix}report`){
 
   message.guild.member(kUser).kick(kReason);
   kchannel.send(kEmbed);    
-  message.reply("***User had been Kicked.***"); 
+  message.reply("**User had been Kicked.**"); 
       if(message.mentions.users.first()) return message.mentions.users.first().send(kicksend);  
 
   return;
@@ -422,16 +422,16 @@ if (cmd === `${prefix}report`){
     if(bUser.hasPermission("BAN_MEMBERS")) return message.reply("Sorry that user cannot be banned.");
   
    let bansend = new Discord.RichEmbed()
-   .setTitle("Banned from **SCP Foundation**")
+   .setTitle("Banned from **TGE - The Galactic Empire**")
    .setDescription("You have been Banned, please bear in mind the administrators now have this kick file Thanks.")
    .addField("Ban reason:", bReason)
    .setColor("#2A363B")
-   .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")
+   .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")
    
          
   
     let bEmbed = new Discord.RichEmbed()
-    .setThumbnail("https://cdn.discordapp.com/attachments/534135074476654596/534421668286693396/03c887dffdc9f6f4de5386e02d19375a.png")    
+    .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")    
     .setTitle("Moderation Ban")
     .setColor("#2A363B")
     .addField("Banned User.", `${bUser} with the ID: ${bUser.id}`)
