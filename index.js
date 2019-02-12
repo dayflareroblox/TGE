@@ -125,6 +125,22 @@ if (cmd === `${prefix}kiss`) {
 
       }
  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+  //---------------------------------------------------------------\\//---------------------------------------------------------------\\
+    
+          if(cmd === `${prefix}help`){
+              let cmds = new Discord.RichEmbed()
+              .setDescription("Help Options.")
+              .addField("Other Commands:", ":cmds")
+              .addField("Staff To Contact:", "Any government member if needed.")
+              .setFooter("Made by: Color3fromHSL")
+              .setThumbnail("https://cdn.discordapp.com/attachments/543660755346784308/544553210472562708/44d7fdd7dca6954248ef513f198dc2e7.png")
+              
+              message.reply(cmds)
+                 
+
+      }
+ //---------------------------------------------------------------\\//---------------------------------------------------------------\\   
+    
       if(cmd === `${prefix}time`){
           var today = new Date()
 let Day = today.toString().split(" ")[0].concat("day");
